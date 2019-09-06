@@ -8,12 +8,15 @@ li {
 }
 
 body {
-    font-family: 'arial';
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
 }
 
 header {
+    font-family: 'Dancing Script', cursive;
     display: flex;
     justify-content: center;
+    font-size: 30px;
 }
 
 nav {
@@ -116,3 +119,11 @@ article {
     flex-flow: column;
     align-self: center;
 }*/
+
+
+@media only screen and (max-width: 600px) {
+    .wrapper {
+        display: grid;
+        grid-column: 1;
+
+    }
