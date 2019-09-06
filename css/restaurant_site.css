@@ -12,11 +12,9 @@
     box-sizing: border-box;
 }
 
-/*
 html {
     scroll-behavior: smooth;
 }
-*/
 
 /*Horizontal line style*/
 hr {
@@ -25,7 +23,6 @@ hr {
     background-color: var(--tertiary-color);
     border: 0 none;
 }
-
 
 h2 {
     color: var(--secondary-color);
@@ -53,7 +50,13 @@ header {
     margin: 3rem;
 }
 
-
+footer {
+    font-family: var(--header-font);
+    color: var(--main-color);
+    letter-spacing: 0.2rem;
+    text-align: center;
+    margin: 3rem;
+}
 
 /*Grid setup on section*/
 section {
@@ -161,6 +164,7 @@ button:hover {
     color: var(--main-color);
 }
 
+/*Media query for desktop*/
 @media only screen and (min-width: 600px) {
 
     /*Navigation styling*/
@@ -219,7 +223,7 @@ button:hover {
         border-bottom: 2px solid var(--tertiary-color);
     }
 
-     nav a {
+    nav a {
         color: black;
         letter-spacing: 0.2rem;
         margin: 1rem;
