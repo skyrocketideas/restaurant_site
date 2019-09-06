@@ -59,12 +59,17 @@ section {
     text-transform: capitalize;
 }
 
-.discount {
+.discounted {
     color: red;
 }
 
+.oldPrice {
+    color: rgba(0, 0, 0, 0.3);
+    text-decoration: line-through;
+}
+
 .soldOut {
-    background-color: chartreuse;
+    background-color: rgba(0, 0, 0, 0.3);
     opacity: 0.2;
 }
 

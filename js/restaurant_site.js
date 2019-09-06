@@ -40,14 +40,13 @@ function showDish(dish) {
     copy.querySelector(".data_name").textContent = dish.name;
     copy.querySelector(".data_price").textContent = `${dish.price} kr`;
     copy.querySelector(".data_price").classList.add("discount");
-    copy.querySelector(".data_alcohol").textContent = `Alcohol Units = ${dish.alcohol}`;
     copy.querySelector(".data_image").src = `https://kea-alt-del.dk/t5/site/imgs/small/${dish.image}-sm.jpg`;
-
 
     //if dish is on discount
     if (dish.discount) {
-        copy.querySelector(".data_price").classList.add("discount");
-        copy.querySelector(".data_discount").textContent = Math.round(dish.price - dish.discount / 100 * dish.price) + "kr"
+        copy.querySelector(".data_discount").textContent = Math.round(dish.price - dish.discount / 100 * dish.price) + " kr"
+        copy.querySelector(".data_discount").classList.add("discounted");
+        copy.querySelector(".data_price").classList.add("oldPrice");
 
     } else {
         copy.querySelector(".data_discount").remove();
@@ -56,6 +55,11 @@ function showDish(dish) {
     //if dish is not sold out
     if (!dish.soldout) {
         copy.querySelector("article").classList.remove("soldOut");
+    }
+
+    //if dish has alcohol
+    if (dish.alcohol > 0) {
+        copy.querySelector("data_alcohol").textContent = `ALCOHOL!!!!${dish.alcohol}`;
     }
 
     copy.querySelector("button").addEventListener("click", () => {
@@ -72,5 +76,6 @@ function showDish(dish) {
 function showDetails(data) {
     modal.querySelector(".modal-name").textContent = data.name;
     modal.querySelector(".modal-description").textContent = data.longdescription;
+    modal.querySelector(".modal-price").textContent = data.price + " kr";
     modal.classList.remove("hide");
 }
