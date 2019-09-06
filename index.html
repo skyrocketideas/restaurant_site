@@ -1,13 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
     <link rel="stylesheet" href="css/restaurant_site.css">
+    <title>The Restaurant</title>
 </head>
 
 <body>
-    <script src="js/restaurant_site.js"></script>
+    <div class="wrapper">
+        <!--Header section -->
+        <header>
+            <h1>The Restaurant</h1>
+        </header>
+        <nav>
+            <a href="#starter">Starters</a>
+            <a href="#main">Mains</a>
+            <a href="#dessert">Desserts</a>
+            <a href="#drinks">Drinks</a>
+            <a href="#sideorders">Sides</a>
+        </nav>
+
+        <!--Main section - Menu -->
+        <main class="productList">
+
+            <!--Create template-->
+            <template>
+                <article class="product soldOut productBody">
+                    <img class="data_image">
+                    <h3 class="data_name">Product brief description</h3>
+                    <h4 class="data_price">Product Price</h4>
+                    <h4 class="data_discount">Discount</h4>
+                    <div class="data_alcohol">Alcohol</div>
+                    <button>More Info</button>
+                </article>
+            </template>
+
+        </main>
+        <footer>© The Restaurant 2019</footer>
+
+        <div class="modal-background hide">
+            <div class="modal-content">
+                <h3 class="modal-name">NAME</h3>
+                <img src="" alt="" class="modal-image" />
+                <p class="modal-description">LONG DESCRIPTION</p>
+                <h4 class="modal-price">PRICE</h4>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/restaurant.js"></script>
 </body>
 </html>
+
+
