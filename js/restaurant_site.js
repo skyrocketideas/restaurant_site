@@ -39,11 +39,10 @@ function showDish(dish) {
     const copy = template.cloneNode(true);
     copy.querySelector(".data_name").textContent = dish.name;
     copy.querySelector(".data_price").textContent = `${dish.price} kr`;
-
     copy.querySelector(".data_price").classList.add("discount");
-
     copy.querySelector(".data_alcohol").textContent = `Alcohol Units = ${dish.alcohol}`;
-    copy.querySelector(".data_image").src = `imgs/small/${dish.image}-sm.jpg`;
+    copy.querySelector(".data_image").src = `https://kea-alt-del.dk/t5/site/imgs/small/${dish.image}-sm.jpg`;
+
 
     //if dish is on discount
     if (dish.discount) {
