@@ -47,6 +47,14 @@ function showDish(dish) {
 //        copy.querySelector("data_alcohol").textContent = `hello mom`;
 //    }
 
+    if (dish.vegetarian) {
+        copy.querySelector(".data_vegetarian").textContent = `${dish.vegetarian} YESSSSSS`;
+    }
+
+    else {
+        copy.querySelector(".data_vegetarian").remove();
+    }
+
     //if dish is on discount
     if (dish.discount) {
         copy.querySelector(".data_discount").textContent = Math.round(dish.price - dish.discount / 100 * dish.price) + " kr"

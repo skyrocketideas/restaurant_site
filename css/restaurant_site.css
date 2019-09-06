@@ -84,11 +84,17 @@ section {
 
 button {
     background-color: #ccc;
+    width: 100%;
     padding: 1rem;
-    margin: 1rem;
     border: none;
     border-radius: 1rem;
     margin-top: auto;
+    transition: background-color 0.5s;
+}
+
+button:hover {
+    background-color: yellow;
+    cursor: pointer;
 }
 
 /*The modal*/
@@ -103,12 +109,13 @@ button {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 .modal-content {
     background-color: #fefefe;
-    border: 1px solid #7c1f17;
+    border: 1rem solid yellow;
+    border-radius: 1rem;
     margin: 1em;
     padding: 2em;
 }
