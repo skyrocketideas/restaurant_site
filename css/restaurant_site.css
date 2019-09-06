@@ -11,6 +11,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /*Remove list styles*/
 li {
     list-style: none;
@@ -152,10 +156,15 @@ button:hover {
 
 .modal-content {
     background-color: #fefefe;
+    text-transform: capitalize;
     border: 1rem solid var(--main-color);
     border-radius: 1rem;
     margin: 1em;
     padding: 2em;
+}
+
+.modal-content h3 {
+        color: var(--main-color);
 }
 
 /*Responsive for mobile*/
