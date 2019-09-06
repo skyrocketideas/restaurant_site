@@ -81,12 +81,3 @@ function showDetails(data) {
     modal.querySelector(".modal-price").textContent = data.price + " kr";
     modal.classList.remove("hide");
 }
-
-
-let mainNav = document.getElementById('js-menu');
-let navBarToggle = document.getElementById('js-navbar-toggle');
-
-navBarToggle.addEventListener('click', function () {
-
-    mainNav.classList.toggle('active');
-});
