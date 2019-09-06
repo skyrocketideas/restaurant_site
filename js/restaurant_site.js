@@ -42,16 +42,11 @@ function showDish(dish) {
     copy.querySelector(".data_price").classList.add("discount");
     copy.querySelector(".data_image").src = `https://kea-alt-del.dk/t5/site/imgs/small/${dish.image}-sm.jpg`;
 
-//    //if dish has alcohol
-//    if (dish.alcohol) {
-//        copy.querySelector("data_alcohol").textContent = `hello mom`;
-//    }
-
+    //if dish is vegetarian
     if (dish.vegetarian) {
-        copy.querySelector(".data_vegetarian").textContent = `${dish.vegetarian} YESSSSSS`;
-    }
-
-    else {
+        copy.querySelector(".data_vegetarian").textContent = `Suitable for vegetarians`;
+        copy.querySelector(".data_vegetarian").classList.add("vegetarianStatus");
+    } else {
         copy.querySelector(".data_vegetarian").remove();
     }
 
@@ -60,7 +55,6 @@ function showDish(dish) {
         copy.querySelector(".data_discount").textContent = Math.round(dish.price - dish.discount / 100 * dish.price) + " kr"
         copy.querySelector(".data_discount").classList.add("discounted");
         copy.querySelector(".data_price").classList.add("oldPrice");
-
     } else {
         copy.querySelector(".data_discount").remove();
     }

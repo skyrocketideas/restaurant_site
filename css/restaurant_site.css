@@ -1,3 +1,12 @@
+/*Setup CSS variables*/
+:root {
+    --main-color: #FF897D;
+    --secondary-color: #63A9FF;
+    --body-font: 'Quicksand', sans-serif;
+    --header-font: 'Dancing Script', cursive;
+}
+
+/*Box sizing*/
 * {
     box-sizing: border-box;
 }
@@ -7,18 +16,21 @@ li {
     list-style: none;
 }
 
+/*body style*/
 body {
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 400;
+    font-family: var(--body-font);
 }
 
+/*Header styles*/
 header {
-    font-family: 'Dancing Script', cursive;
+    font-family: var(--header-font);
+    font-size: 2rem;
     display: flex;
     justify-content: center;
-    font-size: 30px;
+
 }
 
+/*Navigation style*/
 nav {
     display: flex;
     justify-content: center;
@@ -33,6 +45,7 @@ nav a {
     color: hotpink;
 }
 
+/*Grid setup on section*/
 section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -41,7 +54,7 @@ section {
 }
 
 .productList > section > h1 {
-    background-color: #eee;
+    background-color: var(--main-color);
     text-transform: uppercase;
     letter-spacing: 1rem;
     padding: 1rem;
@@ -64,6 +77,13 @@ section {
 
 .discounted {
     color: red;
+}
+
+.vegetarianStatus {
+    color: green;
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 0.8rem;
 }
 
 .oldPrice {
@@ -97,7 +117,7 @@ button:hover {
     cursor: pointer;
 }
 
-/*The modal*/
+/*The modal for long description text*/
 .hide {
     display: none;
 }
@@ -120,14 +140,7 @@ button:hover {
     padding: 2em;
 }
 
-/*
-article {
-    display: flex;
-    flex-flow: column;
-    align-self: center;
-}*/
-
-
+/*Responsive for mobile*/
 @media only screen and (max-width: 600px) {
     .wrapper {
         display: grid;
