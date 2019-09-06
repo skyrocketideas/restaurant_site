@@ -2,6 +2,7 @@
 :root {
     --main-color: #FF897D;
     --secondary-color: #63A9FF;
+    --tertiary-color: #eee;
     --body-font: 'Nanum Myeongjo', serif;
     --header-font: 'Staatliches', cursive;
 }
@@ -11,8 +12,23 @@
     box-sizing: border-box;
 }
 
+/*
 html {
     scroll-behavior: smooth;
+}
+*/
+
+/*Horizontal line style*/
+hr {
+    width: 100%;
+    height: 2px;
+    background-color: var(--tertiary-color);
+    border: 0 none;
+}
+
+h2 {
+    color: var(--secondary-color);
+    font-size: 2rem;
 }
 
 /*Remove list styles*/
@@ -42,24 +58,33 @@ nav {
 }
 
 nav a {
-    background-color: #ccc;
     color: black;
-    letter-spacing: 0.5rem;
-    border-radius: 1rem;
+    letter-spacing: 0.2rem;
     margin: 1rem;
     font-family: var(--body-font);
     text-decoration: none;
-    padding: 1rem;
-    transition: background-color 0.5s;
+    padding: 0.5rem;
+    position: relative;
+}
+
+nav a::after {
+    border-radius: 1em;
+    border-top: .1em solid var(--main-color);
+    content: "";
+    position: absolute;
+    right: 100%;
+    bottom: .14em;
+    left: 0;
+    transition: right .4s;
 }
 
 nav a:hover {
-    background-color: var(--main-color);
-    cursor: pointer;
+    text-decoration: none;
 }
 
-
-
+nav a:hover::after {
+    right: 0;
+}
 
 /*Grid setup on section*/
 section {
@@ -70,8 +95,7 @@ section {
 
 .productList > section > h1 {
     font-family: var(--header-font);
-    background-color: var(--main-color);
-    color: white;
+    color: var(--main-color);
     text-align: center;
     letter-spacing: 0.5rem;
     text-transform: uppercase;
@@ -83,7 +107,7 @@ section {
 .product {
     display: flex;
     flex-flow: column;
-    border: 8px solid #eee;
+    border: 0.3rem solid var(--tertiary-color);
     border-radius: 1rem;
     margin: 1rem;
     padding: 1rem;
@@ -95,7 +119,8 @@ section {
 }
 
 .discounted {
-    color: red;
+    color: var(--main-color);
+    font-weight: 700;
 }
 
 /*Vegetarian class status*/
@@ -125,7 +150,7 @@ section {
 /*Button styling*/
 button {
     font: var(--body-font);
-    background-color: #ccc;
+    background-color: var(--tertiary-color);
     width: 100%;
     padding: 1rem;
     border: none;
@@ -164,7 +189,7 @@ button:hover {
 }
 
 .modal-content h3 {
-        color: var(--main-color);
+    color: var(--main-color);
 }
 
 /*Responsive for mobile*/
